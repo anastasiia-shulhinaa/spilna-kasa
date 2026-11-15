@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+backend/kasa.db
+backend/uploads/
+backend/.env
+node_modules/
+frontend/dist/
+*.log

@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-blush text-ink font-sans antialiased;
+    min-height: 100dvh;
+  }
+  ::selection {
+    @apply bg-rose-200 text-ink;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.5;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-3xl bg-white shadow-soft;
+  }
+  .label {
+    @apply mb-2 block text-xs font-semibold uppercase tracking-wider text-muted;
+  }
+  .field {
+    @apply w-full rounded-2xl border border-line bg-white px-4 py-3 text-[15px] text-ink outline-none transition
+      placeholder:text-muted/70 focus:border-rose-400 focus:ring-4 focus:ring-rose-100;
+  }
+  .amount-plus {
+    @apply text-plus;
+  }
+  .amount-minus {
+    @apply text-minus;
+  }
+}
+
+.bg-glow {
+  background:
+    radial-gradient(40rem 28rem at 110% -10%, rgba(240, 117, 163, 0.22), transparent 60%),
+    radial-gradient(32rem 24rem at -20% 110%, rgba(251, 207, 225, 0.6), transparent 60%),
+    #fff7fa;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
